@@ -1,0 +1,6 @@
+# ./kustomization.yaml
+helmCharts:
+- name: nginx
+  releaseName: nginx
+  namespace: mynamespace
+  valuesFile: overrides-values.yaml

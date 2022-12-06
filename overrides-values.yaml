@@ -1,0 +1,30 @@
+
+image:
+  registry: docker.io
+  repository: bitnami/nginx
+  tag: 1.23.2-debian-11-r11
+  pullPolicy: IfNotPresent
+  debug: false
+
+replicaCount: 1
+
+hostNetwork: false
+hostIPC: false
+
+containerPorts:
+  http: 8080
+  https: ""
+
+service:
+  type: LoadBalancer
+  ports:
+    http: 80
+    https: 443
+
+  nodePorts:
+    http: ""
+    https: ""
+
+  targetPort:
+    http: http
+    https: https
